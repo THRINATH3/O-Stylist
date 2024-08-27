@@ -19,7 +19,7 @@ function Register() {
 
   async function onSubmit(data) {
     try {
-      let res = await fetch('http://localhost:5000/user-api/user', {
+      let res = await fetch('https://o-stylist-6jpm.vercel.app/user-api/user', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json"

@@ -5,7 +5,7 @@ const app = express();
 
 const cors=require('cors');
 app.use(cors({
-    origin:'http://localhost:5173'
+    origin:'https://o-stylist.vercel.app'
 }))
 app.use(express.json());
 require('dotenv').config();

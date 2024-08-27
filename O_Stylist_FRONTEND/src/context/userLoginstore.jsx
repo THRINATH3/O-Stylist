@@ -9,7 +9,7 @@ function UserLoginStore({ children }) {
   async function onSubmit(data) {
     try {
       const res = await fetch(
-        'http://localhost:5000/user-api/login',
+        'https://o-stylist-6jpm.vercel.app/user-api/login',
         {
           method: "POST",
           headers: { "Content-type": "application/json" ,},

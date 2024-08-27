@@ -23,7 +23,7 @@ function Occasion() {
       const nooccasion=occasion.replace(/\s+/g, '');
       console.log(nooccasion);
       const nobodyStructure=bodyStructure.replace(/\s+/g, '');
-      const res = await fetch(`http://localhost:5000/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits/${nooccasion}/${nobodyStructure}/${curruser.gender}`);
+      const res = await fetch(`https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits/${nooccasion}/${nobodyStructure}/${curruser.gender}`);
       const data = await res.json();
       console.log(data);
       if (res.ok) {
@@ -81,7 +81,7 @@ function Occasion() {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits', {
+      const res = await fetch('https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits', {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
