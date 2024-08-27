@@ -1,0 +1,13 @@
+.createAccount{
+    text-decoration: none;
+}
+
+.createAccount:hover{
+    color: red;
+}
+
+@media screen and (max-width:390px){
+   .form{
+    width:100%;
+   } 
+}

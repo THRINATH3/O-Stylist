@@ -1,0 +1,8 @@
+.user-container {
+    border-color: rgb(166, 166, 165); 
+    border-style: ridge;  
+    border-width: 10px;
+    padding: 25px;   
+    border-radius: 50px;
+  }
+  

@@ -1,0 +1,47 @@
+
+@keyframes slideInLeft {
+    from{
+        transform: translate(-300px);
+    }
+
+    to{
+        transform: translate(0);
+    }
+}
+
+.slideInLeft{
+    animation: slideInLeft 1.5s ease-in 0s 1 both;
+}
+
+.slideInLeft2{
+    animation: slideInLeft 2s ease-in 0.5s 1 both;
+}
+
+
+@keyframes slideInRight {
+    from{
+        transform: translate(300px);
+    }
+
+    to{
+        transform: translate(0);
+    }
+}
+
+.slideInRight{
+    animation: slideInRight 1.5s ease-in-out 0s 1 both;
+}
+  
+.card-style {
+    border-radius: 20px !important;
+    box-shadow: 5px 5px 8px;
+}
+
+.card-style:hover{
+   background: linear-gradient(15deg,#f5effb ,#daeeeb) !important; 
+   
+}
+
+.outfitsImage:hover{
+   transform: scale(1.015);
+}

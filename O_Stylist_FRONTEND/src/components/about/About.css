@@ -1,0 +1,106 @@
+
+@keyframes slideInLeft {
+    from{
+        transform: translate(-300px);
+    }
+
+    to{
+        transform: translate(0);
+    }
+}
+
+.slideInLeft{
+    animation: slideInLeft 1.5s ease-in 0s 1 both;
+}
+
+.slideInLeft2{
+    animation: slideInLeft 2s ease-in 0.5s 1 both;
+}
+
+
+@keyframes slideInRight {
+    from{
+        transform: translate(300px);
+    }
+
+    to{
+        transform: translate(0);
+    }
+}
+
+.slideInRight{
+    animation: slideInRight 1.5s ease-in-out 0s 1 both;
+}
+
+.slideInRight2{
+    animation: slideInRight 2s ease-in-out 0.5s 1 both;
+}
+
+p{
+    text-align: justify;
+}
+
+.aboutUs img{
+    width: 85%;
+}
+
+.aboutMe img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.aboutUs{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.aboutMe{
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutMe p{
+    padding-left: 10%;
+}
+
+
+@media screen and (max-width:991px) {
+    .aboutUs{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .aboutMe{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .aboutUs img{
+        width: 55%;
+    }
+    .aboutMe img{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+    }
+    .aboutMe p{
+        padding-left: 0%;
+    }
+    
+}
+
+
+
+@media screen and (max-width:500px) {
+    .aboutUs{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .aboutUs img{
+        width:100%;
+    }
+    .aboutMe img{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+    }
+}

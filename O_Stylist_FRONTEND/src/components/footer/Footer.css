@@ -1,0 +1,58 @@
+.footer {
+    margin-top: 50px;
+    color: #1d1919; 
+}
+
+.footer h5 {
+    color: #0d0101;
+    font-weight: bolder;
+}
+.footer a{
+    font-weight: 400;
+    font-size: small;
+    font-style: normal;
+}
+.footer p {
+    margin-bottom: 10px; 
+    font-weight: 400;
+    font-size: small;
+    font-style: normal;
+}
+.footer ul {
+    padding: 0;
+    list-style: none; 
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li .links {
+    color: #1c0404;
+    text-decoration: none; 
+}
+
+.footer ul li .links:hover {
+    color: rgb(223, 85, 10);
+    text-decoration: double;
+}
+
+.linked_in{
+    font-size: xx-large;
+}
+
+.linked_in:hover{
+    color: rgb(51, 127, 220);
+    background-color: white;
+}
+
+.git_hub{
+    font-size: xx-large;
+}
+
+.git_hub:hover{
+    color: white;
+    background-color: #0d0101;
+    border-radius: 105%;
+}
+
