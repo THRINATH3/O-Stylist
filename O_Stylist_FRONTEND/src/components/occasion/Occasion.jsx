@@ -341,7 +341,7 @@ function Occasion() {
                   
                   {userSuggestedOutfits.map((outfit, index) => (
                     <div className="col" key={index}>
-                    <div className="card  outfitStyle">
+                    <div className="card h-100 outfitStyle">
                     {displayReviewArray && reviewIndex===index?(
                       <FaCommentSlash className='comment' style={{cursor:'pointer'}} onClick={change} />
                     ):(
@@ -349,7 +349,7 @@ function Occasion() {
                     )}
 
                     
-                  <div className="card-body d-flex flex-column overflows">
+                  <div className="card-body d-flex flex-column ">
                       <p className="fs-5 text-center">{`Outfit ${index + 1}`}</p>
                       <div className="text-start">
                          <div className="text-center mb-5">
