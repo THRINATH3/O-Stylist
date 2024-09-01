@@ -341,7 +341,7 @@ function Occasion() {
                   
                   {userSuggestedOutfits.map((outfit, index) => (
                     <div className="col" key={index}>
-                    <div className="card h-100 outfitStyle">
+                    <div className="card  outfitStyle">
                     {displayReviewArray && reviewIndex===index?(
                       <FaCommentSlash className='comment' style={{cursor:'pointer'}} onClick={change} />
                     ):(
