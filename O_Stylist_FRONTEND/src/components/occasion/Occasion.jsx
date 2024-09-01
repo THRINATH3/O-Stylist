@@ -349,7 +349,7 @@ function Occasion() {
                     )}
 
                     
-                  <div className="card-body d-flex flex-column ">
+                  <div className="card-body d-flex flex-column overflows">
                       <p className="fs-5 text-center">{`Outfit ${index + 1}`}</p>
                       <div className="text-start">
                          <div className="text-center mb-5">
