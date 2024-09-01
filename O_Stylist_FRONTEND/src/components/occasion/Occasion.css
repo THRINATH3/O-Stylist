@@ -37,13 +37,18 @@
     box-shadow: 5px 5px 8px;
 }
 
-.outfitStyle{
+.outfitStyle {
     border-radius: 20px !important;
     box-shadow: 5px 5px 8px;
-    height: 600px;
+    max-height: 1500px !important;
+    
 }
 
-
+.overflows {
+    overflow-y: scroll; /* Changed to vertical scroll */
+    max-height: 200px; /* Set a fixed maximum height to make it scrollable */
+    padding-right: 15px; /* To accommodate the scrollbar */
+}
 
 .comment{
     position: relative;
