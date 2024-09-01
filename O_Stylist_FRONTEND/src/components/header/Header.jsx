@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom';
 import { usercontext } from '../../context/userLoginContext';
 import './Header.css';
 import logo from '../homePictures/logo.png';
+import { IoHome } from "react-icons/io5";
+import { FcAbout } from "react-icons/fc";
+import { FiLogIn } from "react-icons/fi";
+import { CiLogout } from "react-icons/ci";
+import { IoSettings } from "react-icons/io5";
+import { FaUserCircle } from "react-icons/fa";
+import { FaPersonHalfDress } from "react-icons/fa6";
 
 function Header() {
   const { logout, loginStatus, curruser } = useContext(usercontext);
@@ -15,10 +22,10 @@ function Header() {
             <img src={logo} width={200} alt="logo" />
           </div>
           <div className="col-lg-6 col-sm-12">
-            <div className="d-flex justify-content-around align-items-center">
-              <Link to="" className='link-dec'>Home</Link>
-              <Link to="about" className='link-dec'>About</Link>
-              <Link to="occasion" className='link-dec'>My Outfit</Link>
+            <div className="d-flex justify-content-between align-items-center">
+              <Link to="" className='link-dec'><IoHome className='fs-4 text-dark mb-2'/> Home</Link>
+              <Link to="about" className='link-dec'><FcAbout className='fs-4 text-warning mb-1'/> About</Link>
+              <Link to="occasion" className='link-dec'><FaPersonHalfDress className='fs-2 text-dark mb-2g' />My Outfit</Link>
               {loginStatus ? (
                 <div className="dropdown">
                   <button
@@ -32,13 +39,13 @@ function Header() {
                     {curruser.username.charAt(0).toUpperCase()}
                   </button>
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><Link className="dropdown-item" to="/profile">Profile</Link></li>
-                    <li><Link className="dropdown-item" to="/settings">Settings</Link></li>
-                    <li><button className="dropdown-item" onClick={() => logout()}>Logout</button></li>
+                    <li><Link className="dropdown-item" to="/profile"><FaUserCircle /> Profile</Link></li>
+                    <li><Link className="dropdown-item" to="/settings"><IoSettings /> Settings</Link></li>
+                    <li><button className="dropdown-item" onClick={() => logout()}><CiLogout /> Logout</button></li>
                   </ul>
                 </div>
               ) : (
-                <button className='btn loginShadow'><Link to="login" className='link-dec text-dark'>Login</Link></button>
+                <button className='btn loginShadow'><Link to="login" className='link-dec text-dark'><FiLogIn /> Login</Link></button>
               )}
             </div>
           </div>

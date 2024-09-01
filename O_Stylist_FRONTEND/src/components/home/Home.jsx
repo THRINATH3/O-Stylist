@@ -4,7 +4,7 @@ import logo from '../homePictures/O.mp4'
 function Home() {
 
   return (
-    <div className='libre m-3'>
+    <div className='libre m-2'>
       
       <h4 className='text-center'>The O-Stylist<p className='text-secondary text-center'>Your One-Stop Shop for Occasion Style</p></h4>
       <br />

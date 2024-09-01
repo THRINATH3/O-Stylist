@@ -7,6 +7,8 @@ const cors=require('cors');
 app.use(cors({
     origin:'https://o-stylist.vercel.app'
 }))
+
+
 app.use(express.json());
 require('dotenv').config();
 

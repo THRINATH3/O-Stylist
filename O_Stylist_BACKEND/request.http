@@ -3,6 +3,17 @@ get http://localhost:5000/user-api/users
 ###
 get http://localhost:5000/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits/Weddings/AverageAverage/male
 
+###
+post http://localhost:5000/usersSuggestedMaleOutfitsApi/review/Weddings/AverageAverage/male/1
+Content-Type: application/json
+
+{
+    "username":"maheshpothineni",
+    "review":"I tried it..!! Fantastic Outfit Suggestions..thanks to O-Stylist..!!!"
+}
+
+###
+get http://localhost:5000/usersSuggestedMaleOutfitsApi/review/BirthdayParties/AverageAverage/male/0
 
 ###
 post http://localhost:5000/user-api/user
@@ -33,7 +44,8 @@ Content-Type: application/json
     "description":"description",
     "occName":"Weddings",
     "physic":"Average Average",
-    "gender":"male"
+    "gender":"male",
+    "review":[]
 }
 
 ###

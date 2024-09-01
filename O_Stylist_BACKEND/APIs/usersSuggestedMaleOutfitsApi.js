@@ -47,7 +47,8 @@ userSuggestedMaleOutfitsApp.post('/usersSuggestedMaleOutfits', async (req, res) 
           bottom: newOutfit.bottom,
           shoes: newOutfit.shoes,
           description: newOutfit.description,
-          username:newOutfit.username
+          username:newOutfit.username,
+          review:[]          
         }
       }
     };
@@ -61,7 +62,8 @@ userSuggestedMaleOutfitsApp.post('/usersSuggestedMaleOutfits', async (req, res) 
             bottom: newOutfit.bottom,
             shoes: newOutfit.shoes,
             description: newOutfit.description,
-            username:newOutfit.username
+            username:newOutfit.username,
+            review:[]
           }
         }
       };
@@ -85,6 +87,99 @@ userSuggestedMaleOutfitsApp.post('/usersSuggestedMaleOutfits', async (req, res) 
   }
 });
 
+//review posting
+userSuggestedMaleOutfitsApp.post('/review/:occName/:physic/:gender/:index', async (req, res) => {
+  const review = req.body; // Assuming review object contains {review: string, username: string}
+  console.log(review);
+  const { occName, physic, gender, index } = req.params;
+  const soccName = occName.replace(/([A-Z])/g, ' $1').trim();
+  const sphysic = physic.replace(/([A-Z])/g, ' $1').trim();
+
+  try {
+    // Determine collection and filter based on gender
+    const userSuggestedOutfits = req.app.get(gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits');
+    const filter = {
+      [`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}.${soccName}.${sphysic}`]: { $exists: true }
+    };
+
+    console.log(filter);
+
+    // Ensure the document exists
+    const result = await userSuggestedOutfits.findOne(filter, {
+      [`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}.${soccName}.${sphysic}`]: 1, _id: 0
+    });
+
+    if (!result || !result[`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}`][soccName] ||
+      !result[`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}`][soccName][sphysic]) {
+      return res.status(404).send({ message: 'No outfits found for the specified occasion and body structure.' });
+    }
+
+    const outfitsArray = result[`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}`][soccName][sphysic];
+    if (!outfitsArray[index]) {
+      return res.status(404).send({ message: 'No outfit found at the specified index.' });
+    }
+
+    // Use $addToSet to add review to the specific outfit to prevent duplicate reviews
+    const updateResult = await userSuggestedOutfits.updateOne(
+      filter,
+      {
+        $addToSet: {
+          [`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}.${soccName}.${sphysic}.${index}.review`]: review
+        }
+      }
+    );
+
+    if (updateResult.modifiedCount === 0) {
+      return res.status(500).send({ message: 'Failed to update the document with the new review.' });
+    }
+
+    console.log(outfitsArray[index].review);
+    res.send({ message: "REVIEW POSTED", payload: outfitsArray[index].review });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ message: 'Failed to fetch or update outfits. Please try again.' });
+  }
+});
+
+userSuggestedMaleOutfitsApp.get('/review/:occName/:physic/:gender/:index',async(req,res)=>{
+  const review = req.body; // Assuming review object contains {review: string, username: string}
+  console.log(review);
+  const { occName, physic, gender, index } = req.params;
+  const soccName = occName.replace(/([A-Z])/g, ' $1').trim();
+  const sphysic = physic.replace(/([A-Z])/g, ' $1').trim();
+
+  try {
+    // Determine collection and filter based on gender
+    const userSuggestedOutfits = req.app.get(gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits');
+    const filter = {
+      [`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}.${soccName}.${sphysic}`]: { $exists: true }
+    };
+
+    console.log(filter);
+
+    // Ensure the document exists
+    const result = await userSuggestedOutfits.findOne(filter, {
+      [`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}.${soccName}.${sphysic}`]: 1, _id: 0
+    });
+
+    if (!result || !result[`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}`][soccName] ||
+      !result[`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}`][soccName][sphysic]) {
+      return res.status(404).send({ message: 'No outfits found for the specified occasion and body structure.' });
+    }
+
+    const outfitsArray = result[`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}`][soccName][sphysic];
+    if (!outfitsArray[index]) {
+      return res.status(404).send({ message: 'No reviews found at the specified index.' });
+    }
+
+
+    console.log(outfitsArray[index].review);
+    res.send({ message:  outfitsArray[index].review });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ message: 'Failed to fetch or update outfits. Please try again.' });
+  }
+})
 
 
 // GET endpoint to fetch outfits for a given occasion and body structure

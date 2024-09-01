@@ -37,6 +37,25 @@
     box-shadow: 5px 5px 8px;
 }
 
+.outfitStyle{
+    border-radius: 20px !important;
+    box-shadow: 5px 5px 8px;
+}
+
+.comment{
+    position: relative;
+    margin-left: -10px;
+    margin-top: -15px;
+    margin-bottom: -25px;
+    border-radius: 100%;
+    background-color: rgb(143, 228, 200);
+    padding: 10px;
+    font-weight: bolder;
+    font-size: xx-large;
+    width: 70px;
+    height: 60px;
+}
+
 .card-style:hover{
    background: linear-gradient(15deg,#f5effb ,#daeeeb) !important; 
    
@@ -44,4 +63,10 @@
 
 .outfitsImage:hover{
    transform: scale(1.015);
+}
+
+.review{
+    display: flex;
+    justify-content:flex-start;
+    
 }
