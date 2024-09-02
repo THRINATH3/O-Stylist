@@ -12,9 +12,9 @@ function Home() {
       <video src={logo} className='mb-3' autoPlay muted playsInline loop >
           Your browser does not support the video tag.
       </video>
-      <div className="para">
+      <div className="para m-2">
       <p className='fs-5'><span className='text-danger'>Fashion Frustration?😩😖</span>We Got You Boo!😉</p>
-      <p>Struggling to find the perfect outfit? We've got you covered! <span className='Wname'>O-Stylist</span> helps you discover clothes that flatter your body type, match your style, and suit any occasion. Ditch the guesswork and embrace confidence with personalized outfit recommendations. Take our style quiz and unlock your fashion potential today!</p>
+      <p className='fs-6'>Struggling to find the perfect outfit? We've got you covered! <span className='Wname'>O-Stylist</span> helps you discover clothes that flatter your body type, match your style, and suit any occasion. Ditch the guesswork and embrace confidence with personalized outfit recommendations. Take our style quiz and unlock your fashion potential today!</p>
       </div>
       </div>
       <div className='text-center text-info'>
