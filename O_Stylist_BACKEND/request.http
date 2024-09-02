@@ -13,6 +13,12 @@ Content-Type: application/json
 }
 
 ###
+delete http://localhost:5000/usersSuggestedMaleOutfitsApi/review/BirthdayParties/AverageAverage/male/0/1
+
+###
+delete http://localhost:5000/usersSuggestedMaleOutfitsApi/usersSuggestedOutfits/BirthdayParties/AverageAverage/male/2
+
+###
 get http://localhost:5000/usersSuggestedMaleOutfitsApi/review/BirthdayParties/AverageAverage/male/0
 
 ###

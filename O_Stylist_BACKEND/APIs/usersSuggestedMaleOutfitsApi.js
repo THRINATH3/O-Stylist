@@ -1,7 +1,7 @@
 const express = require('express');
 const userSuggestedMaleOutfitsApp = express.Router();
 
-// POST endpoint to add new outfit suggestions
+//add new outfit suggestions
 userSuggestedMaleOutfitsApp.post('/usersSuggestedMaleOutfits', async (req, res) => {
   const newOutfit = req.body; // Retrieve data sent from the client
 
@@ -87,6 +87,62 @@ userSuggestedMaleOutfitsApp.post('/usersSuggestedMaleOutfits', async (req, res) 
   }
 });
 
+
+//deleting the outfit
+userSuggestedMaleOutfitsApp.delete('/usersSuggestedOutfits/:occName/:physic/:gender/:outfitIndex', async (req, res) => {
+  const { outfitIndex, occName, gender, physic } = req.params;
+
+  let userSuggestedOutfits;
+  if (gender === 'male') {
+    userSuggestedOutfits = req.app.get('usersSuggestedMaleOutfits');
+  } else {
+    userSuggestedOutfits = req.app.get('usersSuggestedFemaleOutfits');
+  }
+
+  // Convert indices and strings from URL parameters to ensure consistency
+  const index = parseInt(outfitIndex, 10); // Convert outfitIndex to an integer
+  const soccName = occName.replace(/([A-Z])/g, ' $1').trim();
+  const sphysic = physic.replace(/([A-Z])/g, ' $1').trim();
+
+  try {
+    // Construct the filter to find the correct document
+    const filter = {
+      [`${gender === 'male' ? 'usersSuggestedMaleOutfits' : 'usersSuggestedFemaleOutfits'}.${soccName}.${sphysic}`]: { $exists: true }
+    };
+
+    console.log(filter);
+
+    // First, unset the specific array element at the given index
+    const unsetOperation = {
+      $unset: {
+        [`${gender === 'male' ? 'usersSuggestedMaleOutfits' : 'usersSuggestedFemaleOutfits'}.${soccName}.${sphysic}.${index}`]: 1
+      }
+    };
+
+    const unsetResult = await userSuggestedOutfits.updateOne(filter, unsetOperation);
+
+    if (unsetResult.matchedCount === 0) {
+      return res.status(404).send({ message: 'No matching occasion and physique type found.' });
+    }
+
+    // Then, remove any null values that may result from the unset operation
+    const pullOperation = {
+      $pull: {
+        [`${gender === 'male' ? 'usersSuggestedMaleOutfits' : 'usersSuggestedFemaleOutfits'}.${soccName}.${sphysic}`]: null
+      }
+    };
+
+    const pullResult = await userSuggestedOutfits.updateOne(filter, pullOperation);
+
+    res.send({ message: 'Outfit deleted successfully.', payload: pullResult });
+  } catch (err) {
+    console.error(err); // Log any server-side errors
+    res.status(500).send({ message: 'Failed to delete the outfit. Please try again.' }); // Send error response
+  }
+});
+
+
+
 //review posting
 userSuggestedMaleOutfitsApp.post('/review/:occName/:physic/:gender/:index', async (req, res) => {
   const review = req.body; // Assuming review object contains {review: string, username: string}
@@ -141,6 +197,7 @@ userSuggestedMaleOutfitsApp.post('/review/:occName/:physic/:gender/:index', asyn
   }
 });
 
+//getting the reviews
 userSuggestedMaleOutfitsApp.get('/review/:occName/:physic/:gender/:index',async(req,res)=>{
   const review = req.body; // Assuming review object contains {review: string, username: string}
   console.log(review);
@@ -182,7 +239,7 @@ userSuggestedMaleOutfitsApp.get('/review/:occName/:physic/:gender/:index',async(
 })
 
 
-// GET endpoint to fetch outfits for a given occasion and body structure
+//getting the outfits
 userSuggestedMaleOutfitsApp.get('/usersSuggestedMaleOutfits/:occName/:physic/:gender', async (req, res) => {
   const { occName, physic,gender } = req.params;
   const soccName=occName.replace(/([A-Z])/g, ' $1').trim();
@@ -250,6 +307,82 @@ userSuggestedMaleOutfitsApp.get('/usersSuggestedMaleOutfits/:occName/:physic/:ge
     }
   }
 });
+
+
+//deleting the reviews
+userSuggestedMaleOutfitsApp.delete('/review/:occName/:physic/:gender/:index/:reviewIndex', async (req, res) => {
+  const { occName, physic, gender, index, reviewIndex } = req.params;
+  const soccName = occName.replace(/([A-Z])/g, ' $1').trim();
+  const sphysic = physic.replace(/([A-Z])/g, ' $1').trim();
+
+  try {
+    // Determine the collection based on gender
+    const userSuggestedOutfits = req.app.get(gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits');
+    const filter = {
+      [`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}.${soccName}.${sphysic}`]: { $exists: true }
+    };
+
+    console.log(filter);
+
+    // Check if the document and the specific outfit exist
+    const result = await userSuggestedOutfits.findOne(filter, {
+      [`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}.${soccName}.${sphysic}`]: 1, _id: 0
+    });
+
+    if (!result || !result[`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}`][soccName] ||
+      !result[`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}`][soccName][sphysic]) {
+      return res.status(404).send({ message: 'No outfits found for the specified occasion and body structure.' });
+    }
+
+    const outfitsArray = result[`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}`][soccName][sphysic];
+    if (!outfitsArray[index]) {
+      return res.status(404).send({ message: 'No outfit found at the specified index.' });
+    }
+
+    const reviewsArray = outfitsArray[index].review;
+    if (!reviewsArray || reviewsArray.length <= reviewIndex) {
+      return res.status(404).send({ message: 'No review found at the specified review index.' });
+    }
+
+    // Use $unset to remove the specific review at reviewIndex
+    const unsetResult = await userSuggestedOutfits.updateOne(
+      filter,
+      {
+        $unset: {
+          [`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}.${soccName}.${sphysic}.${index}.review.${reviewIndex}`]: null
+        }
+      }
+    );
+
+    if (unsetResult.modifiedCount === 0) {
+      return res.status(500).send({ message: 'Failed to unset the review at the specified index.' });
+    }
+
+    // Use $pull to remove the null value from the reviews array
+    const pullResult = await userSuggestedOutfits.updateOne(
+      filter,
+      {
+        $pull: {
+          [`${gender === 'female' ? 'usersSuggestedFemaleOutfits' : 'usersSuggestedMaleOutfits'}.${soccName}.${sphysic}.${index}.review`]: null
+        }
+      }
+    );
+
+    if (pullResult.modifiedCount === 0) {
+      return res.status(500).send({ message: 'Failed to remove the null value from the review array.' });
+    }
+
+    res.send({ message: "REVIEW DELETED SUCCESSFULLY" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ message: 'Failed to fetch or update outfits. Please try again.' });
+  }
+});
+
+
+
+
+
 
 
 module.exports = userSuggestedMaleOutfitsApp;

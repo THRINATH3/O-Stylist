@@ -7,6 +7,8 @@ import tempImage from '../homePictures/Temporary.png';
 import { FaCommentDots } from "react-icons/fa";
 import { FaCommentSlash } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
+import { RiDeleteBin5Line } from "react-icons/ri";
+import { MdDelete } from "react-icons/md";
 
 function Occasion() {
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -23,6 +25,69 @@ function Occasion() {
   const [reviewIndex,setReviewIndex]=useState(-1);
   const navigate = useNavigate();
 
+
+  //Function to remove the messages from the modals
+  function modal()
+  {
+    setReply('');
+    setReplyReview('');
+  }
+
+  //Function to delete the reviews
+  async function DeleteReview(deleteIndex) {
+    const nooccasion = getoccName.replace(/\s+/g, '');
+    const nobodyStructure = physic.replace(/\s+/g, '');
+    const gender = curruser.gender;
+    console.log('Deleting review at index:', deleteIndex);
+  
+    try {
+      const res = await fetch(`https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/review/${nooccasion}/${nobodyStructure}/${gender}/${reviewIndex}/${deleteIndex}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (!res.ok) {
+        console.error(`Error: ${response.status} ${response.statusText}`);
+      }
+      else{
+      const result = await res.json();
+      console.log('Review deleted successfully:', result.message);
+      alert("Your comment has been scheduled for deletion. The change will be visible when you navigate to another page.");
+      }
+    } catch (err) {
+      console.error('Failed to delete review:', err);
+    }
+  }
+  
+
+  //Function to delete the outfits
+  async function deleteOutfit(deleteIndex)
+  {
+    const nooccasion = getoccName.replace(/\s+/g, '');
+    const nobodyStructure = physic.replace(/\s+/g, '');
+    const gender = curruser.gender;
+    try {
+      const res = await fetch(`https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedOutfits/${nooccasion}/${nobodyStructure}/${gender}/${deleteIndex}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (!res.ok) {
+        console.error(`Error: ${response.status} ${response.statusText}`);
+      }
+      else{
+      const result = await res.json();
+      console.log('Outfit deleted successfully:', result.message);
+      alert("Your outfit has been scheduled for deletion. The change will be visible when you navigate to another page.");
+      }
+    } catch (err) {
+      console.error('Failed to delete review:', err);
+    }
+  }
 
 
   function backToOccasions()
@@ -120,6 +185,9 @@ function Occasion() {
       gender: curruser.gender,
       username: curruser.username
     };
+
+
+    
 
     try {
       const res = await fetch('https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits', {
@@ -254,6 +322,7 @@ function Occasion() {
                       className="btn-close" 
                       data-bs-dismiss="modal" 
                       aria-label="Close"
+                      onClick={modal}
                     />
                   </div>
                   <div className="modal-body">
@@ -342,16 +411,23 @@ function Occasion() {
                   {userSuggestedOutfits.map((outfit, index) => (
                     <div className="col" key={index}>
                     <div className="card outfitStyle">
-                      
+                    
                     {displayReviewArray && reviewIndex===index?(
                       <FaCommentSlash className='comment' style={{cursor:'pointer'}} onClick={change} />
                     ):(
                      <FaCommentDots className=' comment' style={{cursor:'pointer'}} onClick={()=>reviewArrayUpdation(index)}/>
                     )}
-
+                    {outfit.username===curruser.username?(
+                      <div className="text-end">
+                      <MdDelete className='deleteOutfit fs-1' style={{cursor:'pointer'}} onClick={()=>deleteOutfit(index)}/>
+                      </div>
+                    ):(
+                      <p></p>
+                    )}
                     
                   <div className="card-body d-flex flex-column ">
                       <p className="fs-5 text-center">{`Outfit ${index + 1}`}</p>
+                      
                       <div className="text-start">
                          <div className="text-center mb-5">
            <img
@@ -392,15 +468,36 @@ function Occasion() {
         >
           Wanna give a review?
         </button>
+
         {(reviewArray.length && displayReviewArray&& loginStatus && reviewIndex===index)?(
-         <ul className='mt-5 list-unstyled overflows'>
-          <p className='fs-5'><strong>Comments on Outfit {reviewIndex+1}:</strong></p>
-         {reviewArray.map((reviews, index) => (
-           <li key={index}>
-             <strong className='fs-6'><hr /><FaUserCircle /> {reviews.username}:</strong><br /> <span className='fs-6'>{reviews.review}</span>
+          <p className="fs-5 mt-3">
+          <strong>Comments on Outfit {reviewIndex + 1}:</strong>
+        </p>
+        ):(
+          <p></p>
+        )}
+        {(reviewArray.length && displayReviewArray&& loginStatus && reviewIndex===index)?(
+        <ul className="list-unstyled overflows">
+         {reviewArray.map((reviews, idx) => (
+           <li key={idx} className="mb-3">
+             <div className="d-flex justify-content-between align-items-center">
+               <strong className="fs-6">
+                 <FaUserCircle /> {reviews.username}:
+               </strong>
+               {reviews.username === curruser.username && (
+                 <span className="delete fs-4 text-center" style={{ cursor: 'pointer' }}>
+                   <RiDeleteBin5Line onClick={() => DeleteReview(idx)} className='mb-1 mx-2'/>
+                 </span>
+               )}
+             </div>
+             <div className="mt-1">
+               <span className="fs-6">{reviews.review}</span>
+             </div>
+             <hr />
            </li>
          ))}
        </ul>
+       
       ):(
        <br />
       )}
@@ -421,7 +518,8 @@ function Occasion() {
                   type="button"
                   className="btn-close"
                   data-bs-dismiss="modal"
-                  aria-label="Close"
+                  aria-label="Close"  
+                  onClick={modal}
                 ></button>
               </div>
               <div className="modal-body">

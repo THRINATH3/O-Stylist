@@ -2,7 +2,7 @@ import React from 'react'
 import './Home.css'
 import logo from '../homePictures/O.mp4'
 function Home() {
-
+  
   return (
     <div className='libre m-2'>
       
