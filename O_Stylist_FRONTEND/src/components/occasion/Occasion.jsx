@@ -350,6 +350,7 @@ function Occasion() {
                   </div>
                   <div className="modal-body">
                     <form className='mb-5 mt-5 bg-light p-5 shadow-lg mx-10' onSubmit={onPost}>
+                    <h3 className='text-center text-success'>{reply}</h3>
                       <h3 className='text-center'>Outfit</h3>
                       <div className='mb-3'>
                         <label htmlFor="top" className='form-label'>Top</label>
@@ -392,7 +393,6 @@ function Occasion() {
                     >
                       Close
                     </button>
-                    <h3 className='text-center text-success'>{reply}</h3>
                   </div>
                 </div>
               </div>
