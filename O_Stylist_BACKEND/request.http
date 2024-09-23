@@ -1,10 +1,10 @@
-get http://localhost:5000/user-api/users
+get https://o-stylist-6jpm.vercel.app/user-api/users
 
 ###
-get http://localhost:5000/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits/Weddings/AverageAverage/male
+get https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits/Weddings/AverageAverage/male
 
 ###
-post http://localhost:5000/usersSuggestedMaleOutfitsApi/review/Weddings/AverageAverage/male/1
+post https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/review/Weddings/AverageAverage/male/1
 Content-Type: application/json
 
 {
@@ -13,16 +13,16 @@ Content-Type: application/json
 }
 
 ###
-delete http://localhost:5000/usersSuggestedMaleOutfitsApi/review/BirthdayParties/AverageAverage/male/0/1
+delete https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/review/BirthdayParties/AverageAverage/male/0/1
 
 ###
-delete http://localhost:5000/usersSuggestedMaleOutfitsApi/usersSuggestedOutfits/BirthdayParties/AverageAverage/male/2
+delete https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedOutfits/BirthdayParties/AverageAverage/male/2
 
 ###
-get http://localhost:5000/usersSuggestedMaleOutfitsApi/review/BirthdayParties/AverageAverage/male/0
+get https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/review/BirthdayParties/AverageAverage/male/0
 
 ###
-post http://localhost:5000/user-api/user
+post https://o-stylist-6jpm.vercel.app/user-api/user
 Content-Type: application/json
 
 {
@@ -31,7 +31,7 @@ Content-Type: application/json
 }
 
 ###
-post http://localhost:5000/user-api/login
+post https://o-stylist-6jpm.vercel.app/user-api/login
 Content-Type: application/json
 
 {
@@ -40,7 +40,7 @@ Content-Type: application/json
 }
 
 ###
-post http://localhost:5000/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits
+post https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits
 Content-Type: application/json
 
 {
@@ -55,7 +55,7 @@ Content-Type: application/json
 }
 
 ###
-put http://localhost:5000/user-api/user
+put https://o-stylist-6jpm.vercel.app/user-api/user
 Content-Type: application/json
 
 {

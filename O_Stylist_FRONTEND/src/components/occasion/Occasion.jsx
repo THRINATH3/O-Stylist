@@ -24,6 +24,9 @@ function Occasion() {
   const [displayReviewArray,setDisplayReviewArray]=useState(false);
   const [reviewIndex,setReviewIndex]=useState(-1);
   const navigate = useNavigate();
+  
+
+
 
 
   //Function to remove the messages from the modals
@@ -38,7 +41,6 @@ function Occasion() {
     const nooccasion = getoccName.replace(/\s+/g, '');
     const nobodyStructure = physic.replace(/\s+/g, '');
     const gender = curruser.gender;
-    console.log('Deleting review at index:', deleteIndex);
   
     try {
       const res = await fetch(`https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/review/${nooccasion}/${nobodyStructure}/${gender}/${reviewIndex}/${deleteIndex}`, {
@@ -48,26 +50,36 @@ function Occasion() {
         },
       });
   
-      if (!res.ok) {
-        console.error(`Error: ${response.status} ${response.statusText}`);
-      }
-      else{
-      const result = await res.json();
-      console.log('Review deleted successfully:', result.message);
-      alert("Your comment has been scheduled for deletion. The change will be visible when you navigate to another page.");
+      if (res.ok) {
+        const result = await res.json();
+        console.log('Review deleted successfully:', result.message);
+  
+        // Create a copy of the review array and use splice to remove the review at deleteIndex
+        const updatedReviews = [...reviewArray];
+        updatedReviews.splice(deleteIndex, 1);
+  
+        // Update the state with the modified array
+        setReviewArray(updatedReviews);
+  
+        alert("Review deleted successfully!");
+      } else {
+        const errorMessage = await res.json();
+        setErr(errorMessage.message || 'Failed to delete the review.');
       }
     } catch (err) {
       console.error('Failed to delete review:', err);
+      setErr('Failed to delete the review.');
     }
   }
   
+  
 
   //Function to delete the outfits
-  async function deleteOutfit(deleteIndex)
-  {
+  async function deleteOutfit(deleteIndex) {
     const nooccasion = getoccName.replace(/\s+/g, '');
     const nobodyStructure = physic.replace(/\s+/g, '');
     const gender = curruser.gender;
+  
     try {
       const res = await fetch(`https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedOutfits/${nooccasion}/${nobodyStructure}/${gender}/${deleteIndex}`, {
         method: 'DELETE',
@@ -76,18 +88,28 @@ function Occasion() {
         },
       });
   
-      if (!res.ok) {
-        console.error(`Error: ${response.status} ${response.statusText}`);
-      }
-      else{
-      const result = await res.json();
-      console.log('Outfit deleted successfully:', result.message);
-      alert("Your outfit has been scheduled for deletion. The change will be visible when you navigate to another page.");
+      if (res.ok) {
+        const result = await res.json();
+        console.log('Outfit deleted successfully:', result.message);
+  
+        // Create a copy of the array and use splice to remove the outfit at deleteIndex
+        const updatedOutfits = [...userSuggestedOutfits];
+        updatedOutfits.splice(deleteIndex, 1);
+  
+        // Update the state with the modified array
+        setUserSuggestedOutfits(updatedOutfits);
+  
+        alert("Outfit deleted successfully!");
+      } else {
+        const errorMessage = await res.json();
+        setErr(errorMessage.message || 'Failed to delete the outfit.');
       }
     } catch (err) {
-      console.error('Failed to delete review:', err);
+      console.error('Failed to delete outfit:', err);
+      setErr('Failed to delete the outfit.');
     }
   }
+  
 
 
   function backToOccasions()
@@ -183,11 +205,12 @@ function Occasion() {
       occName: getoccName,
       physic: physic,
       gender: curruser.gender,
-      username: curruser.username
+      username: curruser.username,
+      link:formData.get('link'),
+      outfitsource:formData.get('outfitsource'),
+      outfitavailability:formData.get('outfitavailability')
+
     };
-
-
-    
 
     try {
       const res = await fetch('https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits', {
@@ -326,7 +349,6 @@ function Occasion() {
                     />
                   </div>
                   <div className="modal-body">
-                    <h3 className='text-center text-success'>{reply}</h3>
                     <form className='mb-5 mt-5 bg-light p-5 shadow-lg mx-10' onSubmit={onPost}>
                       <h3 className='text-center'>Outfit</h3>
                       <div className='mb-3'>
@@ -340,6 +362,18 @@ function Occasion() {
                       <div className='mb-3'>
                         <label htmlFor="shoes" className='form-label'>Shoes</label>
                         <input type="text" id="shoes" name="shoes" className="form-control" required />
+                      </div>
+                      <div className='mb-3'>
+                        <label htmlFor="link" className='form-label'>Outfit Image Link</label>
+                        <input type="url" id="link" name="link" className="form-control" required />
+                      </div>
+                      <div className='mb-3'>
+                        <label htmlFor="outfitsource" className='form-label'>Outfit Link</label>
+                        <input type="url" id="outfitsource" name="outfitsource" className="form-control" required />
+                      </div>
+                      <div className='mb-3'>
+                        <label htmlFor="outfitavailability" className='form-label'>Outfit available on</label>
+                        <input type="text" id="outfitavailability" name="outfitavailability" className="form-control" required />
                       </div>
                       <div className='mb-3'>
                         <label htmlFor="description" className='form-label'>Description</label>
@@ -358,6 +392,7 @@ function Occasion() {
                     >
                       Close
                     </button>
+                    <h3 className='text-center text-success'>{reply}</h3>
                   </div>
                 </div>
               </div>
@@ -432,9 +467,9 @@ function Occasion() {
                          <div className="text-center mb-5">
            <img
               className="outfitsImage"
-              src={tempImage}
+              src={outfit.link}
               alt="Outfit"
-              style={{ width: '100%', borderRadius: '10px' }}
+              style={{ width: '100%', borderRadius: '10px',height:'400px' }}
             />
           </div>
           <p className="fs-6">
@@ -457,6 +492,11 @@ function Occasion() {
             <strong className="text-primary">Suggested By: </strong>
             {outfit.username}
           </p>
+          <p className="fs-6">
+            <strong className="text-primary">Outfit Availible on : </strong>
+            {outfit.outfitavailability} <br /> <br />
+            <strong>Links: </strong> <a className='text-decoration-none'  target="_blank" rel="noopener noreferrer" href={outfit.outfitsource}>Go</a>
+          </p>
         </div>
 
         <button
@@ -474,7 +514,7 @@ function Occasion() {
           <strong>Comments on Outfit {reviewIndex + 1}:</strong>
         </p>
         ):(
-          <p></p>
+            <p></p>
         )}
         {(reviewArray.length && displayReviewArray&& loginStatus && reviewIndex===index)?(
         <ul className="list-unstyled overflows">

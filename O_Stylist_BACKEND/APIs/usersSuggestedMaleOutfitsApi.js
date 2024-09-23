@@ -48,6 +48,9 @@ userSuggestedMaleOutfitsApp.post('/usersSuggestedMaleOutfits', async (req, res) 
           shoes: newOutfit.shoes,
           description: newOutfit.description,
           username:newOutfit.username,
+          link:newOutfit.link,
+          outfitavailability:newOutfit.outfitavailability,
+          outfitsource:newOutfit.outfitsource,
           review:[]          
         }
       }
@@ -63,6 +66,9 @@ userSuggestedMaleOutfitsApp.post('/usersSuggestedMaleOutfits', async (req, res) 
             shoes: newOutfit.shoes,
             description: newOutfit.description,
             username:newOutfit.username,
+            link:newOutfit.link,
+            outfitavailability:newOutfit.outfitavailability,
+            outfitsource:newOutfit.outfitsource,
             review:[]
           }
         }
