@@ -5,7 +5,7 @@ const app = express();
 
 const cors=require('cors');
 app.use(cors({
-    origin:'https://o-stylist.vercel.app'
+    origin:'https://o-stylist.vercel.app/'
 }))
 
 

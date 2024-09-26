@@ -206,30 +206,37 @@ function Occasion() {
       physic: physic,
       gender: curruser.gender,
       username: curruser.username,
-      link:formData.get('link'),
-      outfitsource:formData.get('outfitsource'),
-      outfitavailability:formData.get('outfitavailability')
-
+      link: formData.get('link'),
+      outfitsource: formData.get('outfitsource'),
+      outfitavailability: formData.get('outfitavailability')
     };
-
+  
     try {
       const res = await fetch('https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits', {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
       });
-
+  
       const result = await res.json();
       if (result.message === 'OUTFIT POSTED') {
         setReply("OUTFIT POSTED");
+      
+        const clonedOutfits = [...userSuggestedOutfits];
+        const newOutfit = data;
+        clonedOutfits.push(newOutfit);
+      
+        setUserSuggestedOutfits(clonedOutfits);
       } else {
         setErr(result.message);
       }
+      
     } catch (err) {
       console.error(err);
       setErr('An error occurred while posting the outfit.');
     }
   }
+  
 
 
   async function review(event, index) {
