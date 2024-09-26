@@ -274,16 +274,6 @@ function Register() {
                   />
                   <label className='form-check-label'>Female</label>
                 </div>
-                <div className='form-check'>
-                  <input 
-                    type="radio" 
-                    name="gender" 
-                    value="other" 
-                    className='form-check-input'
-                    {...register('gender')}
-                  />
-                  <label className='form-check-label'>Other</label>
-                </div>
               </div>
               {errors.gender && <p className='text-danger'>*{errors.gender.message}</p>}
             </div>

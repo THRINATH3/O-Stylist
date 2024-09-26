@@ -349,9 +349,9 @@ function Occasion() {
                     />
                   </div>
                   <div className="modal-body">
-                    <form className='mb-5 mt-5 bg-light p-5 shadow-lg mx-10' onSubmit={onPost}>
+                    <form className='mb-5 mt-5 p-5 mx-10' onSubmit={onPost}>
                     <h3 className='text-center text-success'>{reply}</h3>
-                      <h3 className='text-center'>Outfit</h3>
+                      <h3 className='text-center'>Outfit Details</h3>
                       <div className='mb-3'>
                         <label htmlFor="top" className='form-label'>Top</label>
                         <input type="text" id="top" name="top" className="form-control" required />

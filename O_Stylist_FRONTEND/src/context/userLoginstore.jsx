@@ -43,7 +43,7 @@ function UserLoginStore({ children }) {
   }
 
   return (
-    <usercontext.Provider value={{ onSubmit, logout, loginStatus, err, curruser, setCurruser }}>
+    <usercontext.Provider value={{ onSubmit, logout, loginStatus, err, curruser}}>
       {children}
     </usercontext.Provider>
   );
