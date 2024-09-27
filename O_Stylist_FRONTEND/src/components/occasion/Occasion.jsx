@@ -476,7 +476,7 @@ function Occasion() {
               className="outfitsImage"
               src={outfit.link}
               alt="Outfit"
-              style={{ width: '100%', borderRadius: '10px',height:'400px' }}
+              style={{ width: '100%', borderRadius: '10px' ,height:'500px'}}
             />
           </div>
           <p className="fs-6">
@@ -550,7 +550,7 @@ function Occasion() {
       )}
         <div
           className="modal fade"
-          id={`exampleModal-${index}`} // Unique ID for each modal
+          id={`exampleModal-${index}`} 
           tabIndex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"

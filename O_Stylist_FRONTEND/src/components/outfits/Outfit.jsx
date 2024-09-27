@@ -10,7 +10,6 @@
     { occasion: "Casual Outings", emoji: "👕👟" },
     { occasion: "Formal Dinners", emoji: "🍷🍽️" },
     { occasion: "Beach Vacations", emoji: "🏖️🌊" },
-    { occasion: "Concerts or Music Festivals", emoji: "🎤🎸" },
     { occasion: "Baby Showers", emoji: "👶🎀" },
     { occasion: "Bridal Showers", emoji: "👰💍" },
     { occasion: "Cocktail Parties", emoji: "🍸🍹" },
@@ -20,11 +19,12 @@
     { occasion: "Traveling", emoji: "✈️🧳" },
     { occasion: "Housewarming Parties", emoji: "🏡🎁" },
     { occasion: "Anniversary Celebrations", emoji: "💑🎉" },
-    { occasion: "Funerals or Memorial Services", emoji: "🖤💐" },
     { occasion: "Reunions", emoji: "👨‍👩‍👧‍👦🎉" },
     { occasion: "Fashion Shows", emoji: "👗👠" },
     { occasion: "Art Gallery Openings", emoji: "🖼️🎨" },
-    { occasion: "Club Nights", emoji: "💃🕺" }
+    { occasion: "Club Nights", emoji: "💃🕺" },
+    { occasion: "Concerts Or Music Festivals", emoji: "🎤🎸" },
+    { occasion: "Funerals Or Memorial Services", emoji: "🖤💐" },
   ];  
   
 // outfits.jsx
@@ -3594,368 +3594,7 @@ let maleOutfits = {
           }
         ]
     },
-    "Concerts or Music Festivals": {
-    "Skinny Short": [
-      {
-        "top": "Graphic tee",
-        "bottom": "Ripped denim shorts",
-        "shoes": "Sneakers",
-        "description": "A graphic tee with ripped denim shorts and sneakers, perfect for a lively concert or music festival."
-      },
-      {
-        "top": "Band t-shirt",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A band t-shirt with cargo shorts and boots for a comfortable yet edgy festival look."
-      },
-      {
-        "top": "Casual hoodie",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A casual hoodie with denim shorts and high-top sneakers for a relaxed concert outfit."
-      }
-    ],
-    "Skinny Tall": [
-      {
-        "top": "Fitted graphic tee",
-        "bottom": "Slim-fit jeans",
-        "shoes": "Sneakers",
-        "description": "A fitted graphic tee with slim-fit jeans and sneakers for a stylish festival appearance."
-      },
-      {
-        "top": "Band t-shirt",
-        "bottom": "Chino shorts",
-        "shoes": "Loafers",
-        "description": "A band t-shirt with chino shorts and loafers for a chic concert look."
-      },
-      {
-        "top": "Lightweight bomber jacket",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A lightweight bomber jacket over denim shorts and high-top sneakers for a cool festival outfit."
-      }
-    ],
-    "Skinny Average": [
-      {
-        "top": "Graphic tee",
-        "bottom": "Denim shorts",
-        "shoes": "Sneakers",
-        "description": "A graphic tee with denim shorts and sneakers for a casual and comfortable festival look."
-      },
-      {
-        "top": "Band t-shirt",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A band t-shirt with cargo shorts and boots for a practical and stylish concert outfit."
-      },
-      {
-        "top": "Casual jacket",
-        "bottom": "Ripped jeans",
-        "shoes": "High-top sneakers",
-        "description": "A casual jacket with ripped jeans and high-top sneakers for a relaxed yet fashionable appearance."
-      }
-    ],
-    "Lean Short": [
-      {
-        "top": "Tank top",
-        "bottom": "Ripped denim shorts",
-        "shoes": "Sneakers",
-        "description": "A tank top with ripped denim shorts and sneakers for a trendy festival look."
-      },
-      {
-        "top": "Graphic tee",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A graphic tee with cargo shorts and boots for a rugged concert outfit."
-      },
-      {
-        "top": "Casual vest",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A casual vest over denim shorts and high-top sneakers for a cool, laid-back festival appearance."
-      }
-    ],
-    "Lean Tall": [
-      {
-        "top": "Fitted tank top",
-        "bottom": "Slim-fit jeans",
-        "shoes": "Sneakers",
-        "description": "A fitted tank top with slim-fit jeans and sneakers for a sleek and stylish festival look."
-      },
-      {
-        "top": "Graphic tee",
-        "bottom": "Chino shorts",
-        "shoes": "Loafers",
-        "description": "A graphic tee with chino shorts and loafers for a relaxed yet polished concert appearance."
-      },
-      {
-        "top": "Lightweight bomber jacket",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A lightweight bomber jacket over denim shorts and high-top sneakers for a fashionable festival outfit."
-      }
-    ],
-    "Lean Average": [
-      {
-        "top": "Fitted graphic tee",
-        "bottom": "Denim shorts",
-        "shoes": "Sneakers",
-        "description": "A fitted graphic tee with denim shorts and sneakers for a trendy concert look."
-      },
-      {
-        "top": "Tank top",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A tank top with cargo shorts and boots for a practical festival outfit."
-      },
-      {
-        "top": "Casual jacket",
-        "bottom": "Ripped jeans",
-        "shoes": "High-top sneakers",
-        "description": "A casual jacket with ripped jeans and high-top sneakers for a stylish concert appearance."
-      }
-    ],
-    "Lean Muscular Short": [
-      {
-        "top": "Sleeveless graphic tee",
-        "bottom": "Ripped denim shorts",
-        "shoes": "Sneakers",
-        "description": "A sleeveless graphic tee with ripped denim shorts and sneakers for an athletic yet trendy festival look."
-      },
-      {
-        "top": "Muscle-fit t-shirt",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A muscle-fit t-shirt with cargo shorts and boots for a rugged festival outfit."
-      },
-      {
-        "top": "Casual vest",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A casual vest with denim shorts and high-top sneakers for a cool and comfortable concert appearance."
-      }
-    ],
-    "Lean Muscular Tall": [
-      {
-        "top": "Fitted tank top",
-        "bottom": "Slim-fit jeans",
-        "shoes": "Sneakers",
-        "description": "A fitted tank top with slim-fit jeans and sneakers for a sleek, muscular look at the festival."
-      },
-      {
-        "top": "Graphic tee",
-        "bottom": "Chino shorts",
-        "shoes": "Loafers",
-        "description": "A graphic tee with chino shorts and loafers for a stylish and comfortable concert outfit."
-      },
-      {
-        "top": "Lightweight bomber jacket",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A lightweight bomber jacket over denim shorts and high-top sneakers for a fashionable festival appearance."
-      }
-    ],
-    "Lean Muscular Average": [
-      {
-        "top": "Fitted graphic tee",
-        "bottom": "Board shorts",
-        "shoes": "Sneakers",
-        "description": "A fitted graphic tee with board shorts and sneakers for an athletic festival look."
-      },
-      {
-        "top": "Tank top",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A tank top with cargo shorts and boots for a rugged concert outfit."
-      },
-      {
-        "top": "Casual jacket",
-        "bottom": "Ripped jeans",
-        "shoes": "High-top sneakers",
-        "description": "A casual jacket with ripped jeans and high-top sneakers for a stylish yet relaxed appearance."
-      }
-    ],
-    "Average Short": [
-      {
-        "top": "Graphic tee",
-        "bottom": "Ripped denim shorts",
-        "shoes": "Sneakers",
-        "description": "A graphic tee with ripped denim shorts and sneakers for a classic concert look."
-      },
-      {
-        "top": "Casual t-shirt",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A casual t-shirt with cargo shorts and boots for a comfortable festival outfit."
-      },
-      {
-        "top": "Hoodie",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A hoodie with denim shorts and high-top sneakers for a relaxed concert appearance."
-      }
-    ],
-    "Average Tall": [
-      {
-        "top": "Graphic tee",
-        "bottom": "Slim-fit jeans",
-        "shoes": "Sneakers",
-        "description": "A graphic tee with slim-fit jeans and sneakers for a stylish festival look."
-      },
-      {
-        "top": "Casual shirt",
-        "bottom": "Chino shorts",
-        "shoes": "Loafers",
-        "description": "A casual shirt with chino shorts and loafers for a chic concert appearance."
-      },
-      {
-        "top": "Lightweight bomber jacket",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A lightweight bomber jacket over denim shorts and high-top sneakers for a cool festival style."
-      }
-    ],
-    "Average Average": [
-      {
-        "top": "Graphic tee",
-        "bottom": "Board shorts",
-        "shoes": "Sneakers",
-        "description": "A graphic tee with board shorts and sneakers for a trendy festival outfit."
-      },
-      {
-        "top": "Casual t-shirt",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A casual t-shirt with cargo shorts and boots for a relaxed concert look."
-      },
-      {
-        "top": "Hoodie",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A hoodie with denim shorts and high-top sneakers for a comfortable festival appearance."
-      }
-    ],
-    "Chubby Short": [
-      {
-        "top": "Relaxed-fit graphic tee",
-        "bottom": "Ripped denim shorts",
-        "shoes": "Sneakers",
-        "description": "A relaxed-fit graphic tee with ripped denim shorts and sneakers for a comfortable concert look."
-      },
-      {
-        "top": "Casual t-shirt",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A casual t-shirt with cargo shorts and boots for a laid-back festival outfit."
-      },
-      {
-        "top": "Casual hoodie",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A casual hoodie with denim shorts and high-top sneakers for a relaxed concert style."
-      }
-    ],
-    "Chubby Tall": [
-      {
-        "top": "Loose-fit graphic tee",
-        "bottom": "Slim-fit jeans",
-        "shoes": "Sneakers",
-        "description": "A loose-fit graphic tee with slim-fit jeans and sneakers for a comfortable festival look."
-      },
-      {
-        "top": "Casual button-down shirt",
-        "bottom": "Chino shorts",
-        "shoes": "Loafers",
-        "description": "A casual button-down shirt with chino shorts and loafers for a chic concert appearance."
-      },
-      {
-        "top": "Lightweight jacket",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A lightweight jacket with denim shorts and high-top sneakers for a stylish festival outfit."
-      }
-    ],
-    "Chubby Average": [
-      {
-        "top": "Relaxed-fit graphic tee",
-        "bottom": "Board shorts",
-        "shoes": "Sneakers",
-        "description": "A relaxed-fit graphic tee with board shorts and sneakers for a comfortable festival appearance."
-      },
-      {
-        "top": "Casual t-shirt",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A casual t-shirt with cargo shorts and boots for a relaxed concert look."
-      },
-      {
-        "top": "Casual hoodie",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A casual hoodie with denim shorts and high-top sneakers for a laid-back festival outfit."
-      }
-    ],
-    "Overweight Short": [
-      {
-        "top": "Loose-fit graphic tee",
-        "bottom": "Ripped denim shorts",
-        "shoes": "Sneakers",
-        "description": "A loose-fit graphic tee with ripped denim shorts and sneakers for a relaxed concert look."
-      },
-      {
-        "top": "Casual t-shirt",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A casual t-shirt with cargo shorts and boots for a laid-back festival outfit."
-      },
-      {
-        "top": "Comfortable hoodie",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A comfortable hoodie with denim shorts and high-top sneakers for a relaxed festival style."
-      }
-    ],
-    "Overweight Tall": [
-      {
-        "top": "Loose-fit graphic tee",
-        "bottom": "Slim-fit jeans",
-        "shoes": "Sneakers",
-        "description": "A loose-fit graphic tee with slim-fit jeans and sneakers for a comfortable festival appearance."
-      },
-      {
-        "top": "Casual button-down shirt",
-        "bottom": "Chino shorts",
-        "shoes": "Loafers",
-        "description": "A casual button-down shirt with chino shorts and loafers for a polished concert look."
-      },
-      {
-        "top": "Lightweight jacket",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A lightweight jacket with denim shorts and high-top sneakers for a stylish festival outfit."
-      }
-    ],
-    "Overweight Average": [
-      {
-        "top": "Loose-fit graphic tee",
-        "bottom": "Board shorts",
-        "shoes": "Sneakers",
-        "description": "A loose-fit graphic tee with board shorts and sneakers for a comfortable festival look."
-      },
-      {
-        "top": "Casual t-shirt",
-        "bottom": "Cargo shorts",
-        "shoes": "Boots",
-        "description": "A casual t-shirt with cargo shorts and boots for a laid-back concert outfit."
-      },
-      {
-        "top": "Comfortable hoodie",
-        "bottom": "Denim shorts",
-        "shoes": "High-top sneakers",
-        "description": "A comfortable hoodie with denim shorts and high-top sneakers for a relaxed festival style."
-      }
-    ]
-    },
+    
     "Baby Showers": {
         "Skinny Short": [
           {
@@ -7214,368 +6853,6 @@ let maleOutfits = {
           }
         ]
     },
-    "Funerals or Memorial Services": {
-        "Skinny Short": [
-          {
-            "top": "Slim-fit dress shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A slim-fit dress shirt with dark dress shorts and black loafers for a respectful yet stylish funeral appearance."
-          },
-          {
-            "top": "Short-sleeve button-up shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black leather loafers",
-            "description": "A short-sleeve button-up shirt with dark dress shorts and black leather loafers for a smart and appropriate funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A casual blazer over dark dress shorts and black loafers for a refined yet respectful funeral look."
-          }
-        ],
-        "Skinny Tall": [
-          {
-            "top": "Slim-fit dress shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A slim-fit dress shirt with dark chinos and black loafers for a dignified and elegant funeral outfit."
-          },
-          {
-            "top": "Short-sleeve button-up shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black leather loafers",
-            "description": "A short-sleeve button-up shirt with dark chinos and black leather loafers for a respectful and stylish funeral look."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A casual blazer paired with dark chinos and black loafers for a sophisticated yet respectful funeral appearance."
-          }
-        ],
-        "Skinny Average": [
-          {
-            "top": "Slim-fit dress shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A slim-fit dress shirt with dark dress trousers and black loafers for a classic and appropriate funeral look."
-          },
-          {
-            "top": "Short-sleeve button-up shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black leather loafers",
-            "description": "A short-sleeve button-up shirt with dark dress trousers and black leather loafers for a respectful and smart funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A casual blazer over dark dress trousers and black loafers for a refined and respectful funeral appearance."
-          }
-        ],
-        "Lean Short": [
-          {
-            "top": "Muscle-fit dress shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A muscle-fit dress shirt with dark dress shorts and black loafers for a respectful and athletic funeral look."
-          },
-          {
-            "top": "Fitted button-up shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black leather loafers",
-            "description": "A fitted button-up shirt with dark dress shorts and black leather loafers for a dignified and stylish funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A casual blazer paired with dark dress shorts and black loafers for a refined yet appropriate funeral look."
-          }
-        ],
-        "Lean Tall": [
-          {
-            "top": "Muscle-fit dress shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A muscle-fit dress shirt with dark chinos and black loafers for an athletic and dignified funeral appearance."
-          },
-          {
-            "top": "Fitted button-up shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black leather loafers",
-            "description": "A fitted button-up shirt with dark chinos and black leather loafers for a stylish and respectful funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A casual blazer over dark chinos and black loafers for a refined and appropriate funeral look."
-          }
-        ],
-        "Lean Average": [
-          {
-            "top": "Muscle-fit dress shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A muscle-fit dress shirt with dark dress trousers and black loafers for an athletic and respectful funeral appearance."
-          },
-          {
-            "top": "Fitted button-up shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black leather loafers",
-            "description": "A fitted button-up shirt with dark dress trousers and black leather loafers for a stylish and dignified funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A casual blazer over dark dress trousers and black loafers for a refined and respectful funeral look."
-          }
-        ],
-        "Lean Muscular Short": [
-          {
-            "top": "Muscle-fit T-shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black sneakers",
-            "description": "A muscle-fit T-shirt with dark dress shorts and black sneakers for a casual yet respectful funeral appearance."
-          },
-          {
-            "top": "Fitted sports shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A fitted sports shirt with dark dress shorts and black loafers for a sporty yet dignified funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A casual blazer over dark dress shorts and black loafers for a refined and respectful funeral look."
-          }
-        ],
-        "Lean Muscular Tall": [
-          {
-            "top": "Muscle-fit dress shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A muscle-fit dress shirt with dark chinos and black loafers for an athletic and sophisticated funeral appearance."
-          },
-          {
-            "top": "Fitted button-up shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black leather loafers",
-            "description": "A fitted button-up shirt with dark chinos and black leather loafers for a stylish and respectful funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A casual blazer paired with dark chinos and black loafers for a refined and dignified funeral look."
-          }
-        ],
-        "Lean Muscular Average": [
-          {
-            "top": "Muscle-fit dress shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A muscle-fit dress shirt with dark dress trousers and black loafers for an athletic and classic funeral appearance."
-          },
-          {
-            "top": "Fitted button-up shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black leather loafers",
-            "description": "A fitted button-up shirt with dark dress trousers and black leather loafers for a stylish and respectful funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A casual blazer over dark dress trousers and black loafers for a refined and dignified funeral look."
-          }
-        ],
-        "Average Short": [
-          {
-            "top": "Classic dress shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A classic dress shirt with dark dress shorts and black loafers for a traditional and respectful funeral appearance."
-          },
-          {
-            "top": "Breathable polo shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A breathable polo shirt with dark dress shorts and black loafers for a comfortable yet respectful funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A casual blazer paired with dark dress shorts and black loafers for a classic and respectful funeral look."
-          }
-        ],
-        "Average Tall": [
-          {
-            "top": "Classic dress shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A classic dress shirt with dark chinos and black loafers for a sophisticated and respectful funeral outfit."
-          },
-          {
-            "top": "Breathable polo shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A breathable polo shirt with dark chinos and black loafers for a comfortable yet elegant funeral appearance."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A casual blazer over dark chinos and black loafers for a refined and respectful funeral look."
-          }
-        ],
-        "Average Average": [
-          {
-            "top": "Classic dress shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A classic dress shirt with dark dress trousers and black loafers for a traditional and respectful funeral appearance."
-          },
-          {
-            "top": "Breathable polo shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A breathable polo shirt with dark dress trousers and black loafers for a comfortable yet respectful funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A casual blazer over dark dress trousers and black loafers for a sophisticated and respectful funeral look."
-          }
-        ],
-        "Chubby Short": [
-          {
-            "top": "Loose-fit dress shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black sneakers",
-            "description": "A loose-fit dress shirt with dark dress shorts and black sneakers for a relaxed yet respectful funeral appearance."
-          },
-          {
-            "top": "Breathable polo shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A breathable polo shirt with dark dress shorts and black loafers for a comfortable and respectful funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A casual blazer paired with dark dress shorts and black loafers for a refined yet respectful funeral look."
-          }
-        ],
-        "Chubby Tall": [
-          {
-            "top": "Loose-fit dress shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black sneakers",
-            "description": "A loose-fit dress shirt with dark chinos and black sneakers for a comfortable and respectful funeral appearance."
-          },
-          {
-            "top": "Breathable polo shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A breathable polo shirt with dark chinos and black loafers for a smart and respectful funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A casual blazer over dark chinos and black loafers for a sophisticated and respectful funeral look."
-          }
-        ],
-        "Chubby Average": [
-          {
-            "top": "Loose-fit dress shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black sneakers",
-            "description": "A loose-fit dress shirt with dark dress trousers and black sneakers for a comfortable yet respectful funeral appearance."
-          },
-          {
-            "top": "Breathable polo shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A breathable polo shirt with dark dress trousers and black loafers for a smart and respectful funeral outfit."
-          },
-          {
-            "top": "Casual blazer",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A casual blazer over dark dress trousers and black loafers for a refined and respectful funeral look."
-          }
-        ],
-        "Overweight Short": [
-          {
-            "top": "Loose-fit T-shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black sneakers",
-            "description": "A loose-fit T-shirt with dark dress shorts and black sneakers for a relaxed and practical funeral appearance."
-          },
-          {
-            "top": "Casual hoodie",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black loafers",
-            "description": "A casual hoodie with dark dress shorts and black loafers for a laid-back and respectful funeral look."
-          },
-          {
-            "top": "Breathable polo shirt",
-            "bottom": "Dark dress shorts",
-            "shoes": "Black slip-ons",
-            "description": "A breathable polo shirt with dark dress shorts and black slip-ons for a comfortable and respectful funeral outfit."
-          }
-        ],
-        "Overweight Tall": [
-          {
-            "top": "Loose-fit T-shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black sneakers",
-            "description": "A loose-fit T-shirt with dark chinos and black sneakers for a relaxed and practical funeral appearance."
-          },
-          {
-            "top": "Casual hoodie",
-            "bottom": "Dark chinos",
-            "shoes": "Black loafers",
-            "description": "A casual hoodie with dark chinos and black loafers for a comfortable and respectful funeral look."
-          },
-          {
-            "top": "Breathable polo shirt",
-            "bottom": "Dark chinos",
-            "shoes": "Black slip-ons",
-            "description": "A breathable polo shirt with dark chinos and black slip-ons for a smart and respectful funeral outfit."
-          }
-        ],
-        "Overweight Average": [
-          {
-            "top": "Loose-fit T-shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black sneakers",
-            "description": "A loose-fit T-shirt with dark dress trousers and black sneakers for a comfortable and respectful funeral appearance."
-          },
-          {
-            "top": "Casual hoodie",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black loafers",
-            "description": "A casual hoodie with dark dress trousers and black loafers for a laid-back and respectful funeral look."
-          },
-          {
-            "top": "Breathable polo shirt",
-            "bottom": "Dark dress trousers",
-            "shoes": "Black slip-ons",
-            "description": "A breathable polo shirt with dark dress trousers and black slip-ons for a smart and comfortable funeral outfit."
-          }
-        ]
-    },
     "Reunions": {
         "Skinny Short": [
           {
@@ -9023,6 +8300,730 @@ let maleOutfits = {
         "description": "A breathable tank top with slim-fit jeans and slip-ons for a relaxed and stylish club appearance."
       }
     ]
+    },
+    "Concerts Or Music Festivals": {
+    "Skinny Short": [
+      {
+        "top": "Graphic tee",
+        "bottom": "Ripped denim shorts",
+        "shoes": "Sneakers",
+        "description": "A graphic tee with ripped denim shorts and sneakers, perfect for a lively concert or music festival."
+      },
+      {
+        "top": "Band t-shirt",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A band t-shirt with cargo shorts and boots for a comfortable yet edgy festival look."
+      },
+      {
+        "top": "Casual hoodie",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A casual hoodie with denim shorts and high-top sneakers for a relaxed concert outfit."
+      }
+    ],
+    "Skinny Tall": [
+      {
+        "top": "Fitted graphic tee",
+        "bottom": "Slim-fit jeans",
+        "shoes": "Sneakers",
+        "description": "A fitted graphic tee with slim-fit jeans and sneakers for a stylish festival appearance."
+      },
+      {
+        "top": "Band t-shirt",
+        "bottom": "Chino shorts",
+        "shoes": "Loafers",
+        "description": "A band t-shirt with chino shorts and loafers for a chic concert look."
+      },
+      {
+        "top": "Lightweight bomber jacket",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A lightweight bomber jacket over denim shorts and high-top sneakers for a cool festival outfit."
+      }
+    ],
+    "Skinny Average": [
+      {
+        "top": "Graphic tee",
+        "bottom": "Denim shorts",
+        "shoes": "Sneakers",
+        "description": "A graphic tee with denim shorts and sneakers for a casual and comfortable festival look."
+      },
+      {
+        "top": "Band t-shirt",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A band t-shirt with cargo shorts and boots for a practical and stylish concert outfit."
+      },
+      {
+        "top": "Casual jacket",
+        "bottom": "Ripped jeans",
+        "shoes": "High-top sneakers",
+        "description": "A casual jacket with ripped jeans and high-top sneakers for a relaxed yet fashionable appearance."
+      }
+    ],
+    "Lean Short": [
+      {
+        "top": "Tank top",
+        "bottom": "Ripped denim shorts",
+        "shoes": "Sneakers",
+        "description": "A tank top with ripped denim shorts and sneakers for a trendy festival look."
+      },
+      {
+        "top": "Graphic tee",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A graphic tee with cargo shorts and boots for a rugged concert outfit."
+      },
+      {
+        "top": "Casual vest",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A casual vest over denim shorts and high-top sneakers for a cool, laid-back festival appearance."
+      }
+    ],
+    "Lean Tall": [
+      {
+        "top": "Fitted tank top",
+        "bottom": "Slim-fit jeans",
+        "shoes": "Sneakers",
+        "description": "A fitted tank top with slim-fit jeans and sneakers for a sleek and stylish festival look."
+      },
+      {
+        "top": "Graphic tee",
+        "bottom": "Chino shorts",
+        "shoes": "Loafers",
+        "description": "A graphic tee with chino shorts and loafers for a relaxed yet polished concert appearance."
+      },
+      {
+        "top": "Lightweight bomber jacket",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A lightweight bomber jacket over denim shorts and high-top sneakers for a fashionable festival outfit."
+      }
+    ],
+    "Lean Average": [
+      {
+        "top": "Fitted graphic tee",
+        "bottom": "Denim shorts",
+        "shoes": "Sneakers",
+        "description": "A fitted graphic tee with denim shorts and sneakers for a trendy concert look."
+      },
+      {
+        "top": "Tank top",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A tank top with cargo shorts and boots for a practical festival outfit."
+      },
+      {
+        "top": "Casual jacket",
+        "bottom": "Ripped jeans",
+        "shoes": "High-top sneakers",
+        "description": "A casual jacket with ripped jeans and high-top sneakers for a stylish concert appearance."
+      }
+    ],
+    "Lean Muscular Short": [
+      {
+        "top": "Sleeveless graphic tee",
+        "bottom": "Ripped denim shorts",
+        "shoes": "Sneakers",
+        "description": "A sleeveless graphic tee with ripped denim shorts and sneakers for an athletic yet trendy festival look."
+      },
+      {
+        "top": "Muscle-fit t-shirt",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A muscle-fit t-shirt with cargo shorts and boots for a rugged festival outfit."
+      },
+      {
+        "top": "Casual vest",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A casual vest with denim shorts and high-top sneakers for a cool and comfortable concert appearance."
+      }
+    ],
+    "Lean Muscular Tall": [
+      {
+        "top": "Fitted tank top",
+        "bottom": "Slim-fit jeans",
+        "shoes": "Sneakers",
+        "description": "A fitted tank top with slim-fit jeans and sneakers for a sleek, muscular look at the festival."
+      },
+      {
+        "top": "Graphic tee",
+        "bottom": "Chino shorts",
+        "shoes": "Loafers",
+        "description": "A graphic tee with chino shorts and loafers for a stylish and comfortable concert outfit."
+      },
+      {
+        "top": "Lightweight bomber jacket",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A lightweight bomber jacket over denim shorts and high-top sneakers for a fashionable festival appearance."
+      }
+    ],
+    "Lean Muscular Average": [
+      {
+        "top": "Fitted graphic tee",
+        "bottom": "Board shorts",
+        "shoes": "Sneakers",
+        "description": "A fitted graphic tee with board shorts and sneakers for an athletic festival look."
+      },
+      {
+        "top": "Tank top",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A tank top with cargo shorts and boots for a rugged concert outfit."
+      },
+      {
+        "top": "Casual jacket",
+        "bottom": "Ripped jeans",
+        "shoes": "High-top sneakers",
+        "description": "A casual jacket with ripped jeans and high-top sneakers for a stylish yet relaxed appearance."
+      }
+    ],
+    "Average Short": [
+      {
+        "top": "Graphic tee",
+        "bottom": "Ripped denim shorts",
+        "shoes": "Sneakers",
+        "description": "A graphic tee with ripped denim shorts and sneakers for a classic concert look."
+      },
+      {
+        "top": "Casual t-shirt",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A casual t-shirt with cargo shorts and boots for a comfortable festival outfit."
+      },
+      {
+        "top": "Hoodie",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A hoodie with denim shorts and high-top sneakers for a relaxed concert appearance."
+      }
+    ],
+    "Average Tall": [
+      {
+        "top": "Graphic tee",
+        "bottom": "Slim-fit jeans",
+        "shoes": "Sneakers",
+        "description": "A graphic tee with slim-fit jeans and sneakers for a stylish festival look."
+      },
+      {
+        "top": "Casual shirt",
+        "bottom": "Chino shorts",
+        "shoes": "Loafers",
+        "description": "A casual shirt with chino shorts and loafers for a chic concert appearance."
+      },
+      {
+        "top": "Lightweight bomber jacket",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A lightweight bomber jacket over denim shorts and high-top sneakers for a cool festival style."
+      }
+    ],
+    "Average Average": [
+      {
+        "top": "Graphic tee",
+        "bottom": "Board shorts",
+        "shoes": "Sneakers",
+        "description": "A graphic tee with board shorts and sneakers for a trendy festival outfit."
+      },
+      {
+        "top": "Casual t-shirt",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A casual t-shirt with cargo shorts and boots for a relaxed concert look."
+      },
+      {
+        "top": "Hoodie",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A hoodie with denim shorts and high-top sneakers for a comfortable festival appearance."
+      }
+    ],
+    "Chubby Short": [
+      {
+        "top": "Relaxed-fit graphic tee",
+        "bottom": "Ripped denim shorts",
+        "shoes": "Sneakers",
+        "description": "A relaxed-fit graphic tee with ripped denim shorts and sneakers for a comfortable concert look."
+      },
+      {
+        "top": "Casual t-shirt",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A casual t-shirt with cargo shorts and boots for a laid-back festival outfit."
+      },
+      {
+        "top": "Casual hoodie",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A casual hoodie with denim shorts and high-top sneakers for a relaxed concert style."
+      }
+    ],
+    "Chubby Tall": [
+      {
+        "top": "Loose-fit graphic tee",
+        "bottom": "Slim-fit jeans",
+        "shoes": "Sneakers",
+        "description": "A loose-fit graphic tee with slim-fit jeans and sneakers for a comfortable festival look."
+      },
+      {
+        "top": "Casual button-down shirt",
+        "bottom": "Chino shorts",
+        "shoes": "Loafers",
+        "description": "A casual button-down shirt with chino shorts and loafers for a chic concert appearance."
+      },
+      {
+        "top": "Lightweight jacket",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A lightweight jacket with denim shorts and high-top sneakers for a stylish festival outfit."
+      }
+    ],
+    "Chubby Average": [
+      {
+        "top": "Relaxed-fit graphic tee",
+        "bottom": "Board shorts",
+        "shoes": "Sneakers",
+        "description": "A relaxed-fit graphic tee with board shorts and sneakers for a comfortable festival appearance."
+      },
+      {
+        "top": "Casual t-shirt",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A casual t-shirt with cargo shorts and boots for a relaxed concert look."
+      },
+      {
+        "top": "Casual hoodie",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A casual hoodie with denim shorts and high-top sneakers for a laid-back festival outfit."
+      }
+    ],
+    "Overweight Short": [
+      {
+        "top": "Loose-fit graphic tee",
+        "bottom": "Ripped denim shorts",
+        "shoes": "Sneakers",
+        "description": "A loose-fit graphic tee with ripped denim shorts and sneakers for a relaxed concert look."
+      },
+      {
+        "top": "Casual t-shirt",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A casual t-shirt with cargo shorts and boots for a laid-back festival outfit."
+      },
+      {
+        "top": "Comfortable hoodie",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A comfortable hoodie with denim shorts and high-top sneakers for a relaxed festival style."
+      }
+    ],
+    "Overweight Tall": [
+      {
+        "top": "Loose-fit graphic tee",
+        "bottom": "Slim-fit jeans",
+        "shoes": "Sneakers",
+        "description": "A loose-fit graphic tee with slim-fit jeans and sneakers for a comfortable festival appearance."
+      },
+      {
+        "top": "Casual button-down shirt",
+        "bottom": "Chino shorts",
+        "shoes": "Loafers",
+        "description": "A casual button-down shirt with chino shorts and loafers for a polished concert look."
+      },
+      {
+        "top": "Lightweight jacket",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A lightweight jacket with denim shorts and high-top sneakers for a stylish festival outfit."
+      }
+    ],
+    "Overweight Average": [
+      {
+        "top": "Loose-fit graphic tee",
+        "bottom": "Board shorts",
+        "shoes": "Sneakers",
+        "description": "A loose-fit graphic tee with board shorts and sneakers for a comfortable festival look."
+      },
+      {
+        "top": "Casual t-shirt",
+        "bottom": "Cargo shorts",
+        "shoes": "Boots",
+        "description": "A casual t-shirt with cargo shorts and boots for a laid-back concert outfit."
+      },
+      {
+        "top": "Comfortable hoodie",
+        "bottom": "Denim shorts",
+        "shoes": "High-top sneakers",
+        "description": "A comfortable hoodie with denim shorts and high-top sneakers for a relaxed festival style."
+      }
+    ]
+    },
+    "Funerals Or Memorial Services": {
+      "Skinny Short": [
+        {
+          "top": "Slim-fit dress shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A slim-fit dress shirt with dark dress shorts and black loafers for a respectful yet stylish funeral appearance."
+        },
+        {
+          "top": "Short-sleeve button-up shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black leather loafers",
+          "description": "A short-sleeve button-up shirt with dark dress shorts and black leather loafers for a smart and appropriate funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A casual blazer over dark dress shorts and black loafers for a refined yet respectful funeral look."
+        }
+      ],
+      "Skinny Tall": [
+        {
+          "top": "Slim-fit dress shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A slim-fit dress shirt with dark chinos and black loafers for a dignified and elegant funeral outfit."
+        },
+        {
+          "top": "Short-sleeve button-up shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black leather loafers",
+          "description": "A short-sleeve button-up shirt with dark chinos and black leather loafers for a respectful and stylish funeral look."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A casual blazer paired with dark chinos and black loafers for a sophisticated yet respectful funeral appearance."
+        }
+      ],
+      "Skinny Average": [
+        {
+          "top": "Slim-fit dress shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A slim-fit dress shirt with dark dress trousers and black loafers for a classic and appropriate funeral look."
+        },
+        {
+          "top": "Short-sleeve button-up shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black leather loafers",
+          "description": "A short-sleeve button-up shirt with dark dress trousers and black leather loafers for a respectful and smart funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A casual blazer over dark dress trousers and black loafers for a refined and respectful funeral appearance."
+        }
+      ],
+      "Lean Short": [
+        {
+          "top": "Muscle-fit dress shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A muscle-fit dress shirt with dark dress shorts and black loafers for a respectful and athletic funeral look."
+        },
+        {
+          "top": "Fitted button-up shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black leather loafers",
+          "description": "A fitted button-up shirt with dark dress shorts and black leather loafers for a dignified and stylish funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A casual blazer paired with dark dress shorts and black loafers for a refined yet appropriate funeral look."
+        }
+      ],
+      "Lean Tall": [
+        {
+          "top": "Muscle-fit dress shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A muscle-fit dress shirt with dark chinos and black loafers for an athletic and dignified funeral appearance."
+        },
+        {
+          "top": "Fitted button-up shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black leather loafers",
+          "description": "A fitted button-up shirt with dark chinos and black leather loafers for a stylish and respectful funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A casual blazer over dark chinos and black loafers for a refined and appropriate funeral look."
+        }
+      ],
+      "Lean Average": [
+        {
+          "top": "Muscle-fit dress shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A muscle-fit dress shirt with dark dress trousers and black loafers for an athletic and respectful funeral appearance."
+        },
+        {
+          "top": "Fitted button-up shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black leather loafers",
+          "description": "A fitted button-up shirt with dark dress trousers and black leather loafers for a stylish and dignified funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A casual blazer over dark dress trousers and black loafers for a refined and respectful funeral look."
+        }
+      ],
+      "Lean Muscular Short": [
+        {
+          "top": "Muscle-fit T-shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black sneakers",
+          "description": "A muscle-fit T-shirt with dark dress shorts and black sneakers for a casual yet respectful funeral appearance."
+        },
+        {
+          "top": "Fitted sports shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A fitted sports shirt with dark dress shorts and black loafers for a sporty yet dignified funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A casual blazer over dark dress shorts and black loafers for a refined and respectful funeral look."
+        }
+      ],
+      "Lean Muscular Tall": [
+        {
+          "top": "Muscle-fit dress shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A muscle-fit dress shirt with dark chinos and black loafers for an athletic and sophisticated funeral appearance."
+        },
+        {
+          "top": "Fitted button-up shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black leather loafers",
+          "description": "A fitted button-up shirt with dark chinos and black leather loafers for a stylish and respectful funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A casual blazer paired with dark chinos and black loafers for a refined and dignified funeral look."
+        }
+      ],
+      "Lean Muscular Average": [
+        {
+          "top": "Muscle-fit dress shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A muscle-fit dress shirt with dark dress trousers and black loafers for an athletic and classic funeral appearance."
+        },
+        {
+          "top": "Fitted button-up shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black leather loafers",
+          "description": "A fitted button-up shirt with dark dress trousers and black leather loafers for a stylish and respectful funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A casual blazer over dark dress trousers and black loafers for a refined and dignified funeral look."
+        }
+      ],
+      "Average Short": [
+        {
+          "top": "Classic dress shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A classic dress shirt with dark dress shorts and black loafers for a traditional and respectful funeral appearance."
+        },
+        {
+          "top": "Breathable polo shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A breathable polo shirt with dark dress shorts and black loafers for a comfortable yet respectful funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A casual blazer paired with dark dress shorts and black loafers for a classic and respectful funeral look."
+        }
+      ],
+      "Average Tall": [
+        {
+          "top": "Classic dress shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A classic dress shirt with dark chinos and black loafers for a sophisticated and respectful funeral outfit."
+        },
+        {
+          "top": "Breathable polo shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A breathable polo shirt with dark chinos and black loafers for a comfortable yet elegant funeral appearance."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A casual blazer over dark chinos and black loafers for a refined and respectful funeral look."
+        }
+      ],
+      "Average Average": [
+        {
+          "top": "Classic dress shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A classic dress shirt with dark dress trousers and black loafers for a traditional and respectful funeral appearance."
+        },
+        {
+          "top": "Breathable polo shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A breathable polo shirt with dark dress trousers and black loafers for a comfortable yet respectful funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A casual blazer over dark dress trousers and black loafers for a sophisticated and respectful funeral look."
+        }
+      ],
+      "Chubby Short": [
+        {
+          "top": "Loose-fit dress shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black sneakers",
+          "description": "A loose-fit dress shirt with dark dress shorts and black sneakers for a relaxed yet respectful funeral appearance."
+        },
+        {
+          "top": "Breathable polo shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A breathable polo shirt with dark dress shorts and black loafers for a comfortable and respectful funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A casual blazer paired with dark dress shorts and black loafers for a refined yet respectful funeral look."
+        }
+      ],
+      "Chubby Tall": [
+        {
+          "top": "Loose-fit dress shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black sneakers",
+          "description": "A loose-fit dress shirt with dark chinos and black sneakers for a comfortable and respectful funeral appearance."
+        },
+        {
+          "top": "Breathable polo shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A breathable polo shirt with dark chinos and black loafers for a smart and respectful funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A casual blazer over dark chinos and black loafers for a sophisticated and respectful funeral look."
+        }
+      ],
+      "Chubby Average": [
+        {
+          "top": "Loose-fit dress shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black sneakers",
+          "description": "A loose-fit dress shirt with dark dress trousers and black sneakers for a comfortable yet respectful funeral appearance."
+        },
+        {
+          "top": "Breathable polo shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A breathable polo shirt with dark dress trousers and black loafers for a smart and respectful funeral outfit."
+        },
+        {
+          "top": "Casual blazer",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A casual blazer over dark dress trousers and black loafers for a refined and respectful funeral look."
+        }
+      ],
+      "Overweight Short": [
+        {
+          "top": "Loose-fit T-shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black sneakers",
+          "description": "A loose-fit T-shirt with dark dress shorts and black sneakers for a relaxed and practical funeral appearance."
+        },
+        {
+          "top": "Casual hoodie",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black loafers",
+          "description": "A casual hoodie with dark dress shorts and black loafers for a laid-back and respectful funeral look."
+        },
+        {
+          "top": "Breathable polo shirt",
+          "bottom": "Dark dress shorts",
+          "shoes": "Black slip-ons",
+          "description": "A breathable polo shirt with dark dress shorts and black slip-ons for a comfortable and respectful funeral outfit."
+        }
+      ],
+      "Overweight Tall": [
+        {
+          "top": "Loose-fit T-shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black sneakers",
+          "description": "A loose-fit T-shirt with dark chinos and black sneakers for a relaxed and practical funeral appearance."
+        },
+        {
+          "top": "Casual hoodie",
+          "bottom": "Dark chinos",
+          "shoes": "Black loafers",
+          "description": "A casual hoodie with dark chinos and black loafers for a comfortable and respectful funeral look."
+        },
+        {
+          "top": "Breathable polo shirt",
+          "bottom": "Dark chinos",
+          "shoes": "Black slip-ons",
+          "description": "A breathable polo shirt with dark chinos and black slip-ons for a smart and respectful funeral outfit."
+        }
+      ],
+      "Overweight Average": [
+        {
+          "top": "Loose-fit T-shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black sneakers",
+          "description": "A loose-fit T-shirt with dark dress trousers and black sneakers for a comfortable and respectful funeral appearance."
+        },
+        {
+          "top": "Casual hoodie",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black loafers",
+          "description": "A casual hoodie with dark dress trousers and black loafers for a laid-back and respectful funeral look."
+        },
+        {
+          "top": "Breathable polo shirt",
+          "bottom": "Dark dress trousers",
+          "shoes": "Black slip-ons",
+          "description": "A breathable polo shirt with dark dress trousers and black slip-ons for a smart and comfortable funeral outfit."
+        }
+      ]
     }
   };
 
@@ -12647,7 +12648,7 @@ let femaleOutfits={
         }
       ]
     },
-    "Concerts or Music Festivals": {
+    "Concerts Or Music Festivals": {
       "Skinny Short": [
         {
           top: "Crop top",

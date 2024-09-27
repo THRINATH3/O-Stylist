@@ -77,6 +77,10 @@
     color: white;
 }
 
+.comment:hover{
+    background-color: rgb(196, 182, 239);
+}
+
 .comment{
     position: relative;
     margin-left: -10px;
@@ -96,9 +100,15 @@
    
 }
 
-.outfitsImage:hover{
-   transform: scale(1.015);
-}
+.outfitsImage {
+    transition: transform 0.3s ease, height 0.3s ease;
+ }
+ 
+ .outfitsImage:hover {
+    transform: scale(1.1);
+     height: 100%; 
+ }
+ 
 
 .review{
     display: flex;

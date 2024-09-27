@@ -1,7 +1,7 @@
 get https://o-stylist-6jpm.vercel.app/user-api/users
 
 ###
-get https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits/Weddings/AverageAverage/male
+get https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/usersSuggestedMaleOutfits/ConcertsOrMusicFestivals/SkinnyAverage/male
 
 ###
 post https://o-stylist-6jpm.vercel.app/usersSuggestedMaleOutfitsApi/review/Weddings/AverageAverage/male/1
