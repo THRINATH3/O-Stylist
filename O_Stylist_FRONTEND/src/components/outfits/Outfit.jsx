@@ -16148,7 +16148,7 @@ let femaleOutfits={
         }
       ]
     },
-    "Funerals or Memorial Services": {
+    "Funerals Or Memorial Services": {
       "Skinny Short": [
         {
           "top": "Black saree",
