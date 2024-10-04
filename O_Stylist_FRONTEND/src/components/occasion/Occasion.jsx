@@ -9,6 +9,16 @@ import { FaCommentSlash } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
+import mbirthday1 from '../homePictures/mbirthday1.jpg'
+import mbirthday2 from '../homePictures/mbirthday2.jpg'
+import mbirthday3 from '../homePictures/mbirthday3.webp'
+import mwedding1 from '../homePictures/mwedding.jpeg'
+import mwedding2 from '../homePictures/mwedding2.jpeg'
+import mwedding3 from '../homePictures/mwedding3.jpeg'
+import mgrad1 from '../homePictures/mgraduation1.jpeg'
+import fbirthday1 from '../homePictures/fbirthday1.jpg'
+import fbirthday2 from '../homePictures/fbirthday2.jpg'
+import fbirthday3 from '../homePictures/fbirthday3.webp'
 
 function Occasion() {
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -24,10 +34,10 @@ function Occasion() {
   const [displayReviewArray,setDisplayReviewArray]=useState(false);
   const [reviewIndex,setReviewIndex]=useState(-1);
   const navigate = useNavigate();
+  const [photos,setPhotos]=useState([]);
   
-
-
-
+  const malephotos=[mbirthday1,mbirthday2,mbirthday3,mwedding1,mwedding2,mwedding3,mgrad1];
+  const femalephotos=[fbirthday1,fbirthday2,fbirthday3]
 
   //Function to remove the messages from the modals
   function modal()
@@ -176,6 +186,11 @@ function Occasion() {
   function getIndex(occName) {
     setGetoccName(occName);
     setAnimation(false);
+    
+    if(curruser.gender==='male')
+      setPhotos(malephotos);
+    else
+      setPhotos(femalephotos);
 
     let { weight, height } = curruser;
     weight = weight.charAt(0).toUpperCase() + weight.slice(1).toLowerCase();
@@ -411,14 +426,14 @@ function Occasion() {
                 <div className='col' key={index}>
                   <div className='card h-100 outfitStyle'>
                     <div className="card-body d-flex flex-column justify-content-center align-items-center text-center">
-                      <p className="fs-5 text-center">{`Outfit ${index + 1}`}</p>
+                      <p className="fs-5 text-center mt-3 mb-3">{`Outfit ${index + 1}`}</p>
                       <div className="text-start">
                         <div className="text-center mb-5">
                           <img 
                             className='outfitsImage' 
-                            src={tempImage} 
+                            src={photos[index]} 
                             alt="Outfit" 
-                            style={{ width: '100%', borderRadius: '10px' }} 
+                            style={{ width: '100%', borderRadius: '10px',height:'500px'}} 
                           />
                         </div>
                         <p className="fs-6">

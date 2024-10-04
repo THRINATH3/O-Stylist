@@ -3,7 +3,7 @@ import './About.css';
 import profileImage from '../homePictures/profile.jpeg'
 import { FcAbout } from "react-icons/fc";
 import aboutUs from '../homePictures/About Us.png';
-import profile from '../homePictures/profile2.jpeg'
+
 function About() {
   return (
     <div className='libre m-3 '>
