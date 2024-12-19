@@ -15,19 +15,19 @@ function Home() {
       {/* Video Section */}
       <section className="video-section">
         <div className="container">
-          <div className="row align-items-center">
+          <div className="row align-items-center d-flex flex-column-reverse">
             <div className="col-lg-6">
               <h2 className="text-danger fw-bold">Fashion Frustration? 😩😖</h2>
               <p className="fs-5 text-primary">We Got You Boo! 😉</p>
-              <p className="fs-5 text-dark">
+              <p className="fs-6 text-dark">
                 Struggling to find the perfect outfit? We've got you covered! <span className="fw-bold">O-Stylist </span>
                 helps you discover clothes that flatter your body type, match your style, and suit any occasion.
                 Ditch the guesswork and embrace confidence with personalized outfit recommendations. Take our style
                 quiz and unlock your fashion potential today!
               </p>
             </div>
-            <div className="col-lg-6">
-              <video src={logo} className="rounded" autoPlay muted playsInline loop >
+            <div className="col-lg-6 homevideopara">
+              <video src={logo} className="rounded" autoPlay muted playsInline loop style={{border:'white'}}>
                 Your browser does not support the video tag.
               </video>
             </div>
