@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { usercontext } from '../../context/userLoginContext';
 import './Occasion.css';
 import { maleOutfits, femaleOutfits, occasionsWithEmojis, maleAccessories, femaleAccessories } from '../outfits/Outfit';
@@ -33,7 +32,6 @@ function Occasion() {
   const [reviewArray,setReviewArray]=useState([]);
   const [displayReviewArray,setDisplayReviewArray]=useState(false);
   const [reviewIndex,setReviewIndex]=useState(-1);
-  const navigate = useNavigate();
   const [photos,setPhotos]=useState([]);
   
   const malephotos=[mbirthday1,mbirthday2,mbirthday3,mwedding1,mwedding2,mwedding3,mgrad1];

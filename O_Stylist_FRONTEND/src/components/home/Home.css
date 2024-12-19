@@ -25,6 +25,11 @@ video{
     margin-top: 5%;
 }
 
+.box:hover{
+    background-color: rgb(227, 238, 130) !important;
+    color: rgb(8, 12, 129) !important;
+}
+
 @media screen and (max-width:768px) {
     .homevideopara{
         display: flex;

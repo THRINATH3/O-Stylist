@@ -50,7 +50,6 @@ userapp.post('/user', async (req, res) => {
 
 
 //user login
-
 userapp.post('/login',async(req,res)=>{
     const usersCollection=req.app.get('usersCollection');
     const userCred=req.body;
